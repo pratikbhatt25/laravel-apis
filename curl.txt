@@ -1,0 +1,45 @@
+NOTE: Fist start the project on new tab. with php artisan serve.
+
+
+curl -X GET "http://127.0.0.1:8000/api/real-estates" \
+     -H "Accept: application/json"
+
+curl -X GET "http://127.0.0.1:8000/api/real-estates/1" \
+     -H "Accept: application/json"
+
+curl -X POST "http://127.0.0.1:8000/api/real-estates" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "Sunset Villa",
+           "real_state_type": "house",
+           "street": "Palm Street",
+           "external_number": "123A",
+           "internal_number": null,
+           "neighborhood": "Greenwood",
+           "city": "Los Angeles",
+           "country": "US",
+           "rooms": 4,
+           "bathrooms": 2.5,
+           "comments": "Lovely family home"
+         }'
+
+
+curl -X PUT "http://127.0.0.1:8000/api/real-estates/3" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "Sunset Villa Renovated",
+           "real_state_type": "house",
+           "street": "Palm Street",
+           "external_number": "123A",
+           "internal_number": null,
+           "neighborhood": "Greenwood",
+           "city": "Los Angeles",
+           "country": "US",
+           "rooms": 5,
+           "comments": "Recently renovated"
+         }'
+
+curl -X DELETE "http://127.0.0.1:8000/api/real-estates/3" \
+     -H "Accept: application/json"

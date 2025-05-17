@@ -4,6 +4,9 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\RealEstate;
+use App\Http\Requests\StoreRealEstateRequest;
+use App\Http\Requests\UpdateRealEstateRequest;
 
 class RealEstateController extends Controller
 {
@@ -38,7 +41,7 @@ class RealEstateController extends Controller
     public function update(UpdateRealEstateRequest $request, RealEstate $realEstate)
     {
         $realEstate->update($request->validated());
-        return $realEstate->fresh();
+        return response()->json($realEstate->fresh(), 200);
     }
 
     /**
