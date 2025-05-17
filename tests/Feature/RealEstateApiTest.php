@@ -53,8 +53,7 @@ class RealEstateApiTest extends TestCase
         
     
     //     $response->assertStatus(200)
-    //              ->assertJsonFragment(['name' => 'Updated Name']); // ✅ check if update worked
-    // }
+    //              ->assertJsonFragment(['name' => 'Updated Name']); 
 
     public function test_can_soft_delete_real_estate()
     {
